@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Happy Anniversary 💙</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+
+<style>
+    body::after {
+    content: "💖 💛 💙 💖 💛 💙";
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    opacity: 0.08;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(173,216,230,0.2),
+        transparent,
+        rgba(255,255,153,0.2)
+    );
+    pointer-events: none;
+}
+body {
+    margin: 0;
+    font-family: 'Mali', sans-serif;
+    text-align: center;
+    background: linear-gradient(180deg, #0b1a3a, #1c2b5a, #2a3d7a);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* การ์ด */
+.card {
+    background: rgba(20, 30, 60, 0.7); /* 👈 น้ำเงินเข้มใส */
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+.card {
+    border: 1px solid rgba(255,255,255,0.2);
+}
+h1 {
+    color: #ffd6ff;
+    text-shadow: 0 0 10px #fff;
+}
+/* ปุ่มเพลง */
+.music-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #aee2ff;
+    cursor: pointer;
+}
+
+/* สไลด์ */
+.slider {
+    width: 90%;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.slides img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slides img.active {
+    opacity: 1;
+    z-index: 1;
+}
+.static {
+    animation: none;
+    opacity: 0.4;
+}
+
+.left {
+    left: 10px;
+    top: 30%;
+}
+
+.right {
+    right: 10px;
+    left: auto;
+    top: 60%;
+}
+/* หัวใจ */
+.heart {
+    position: fixed;
+    color: pink;
+    font-size: 20px;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+.star {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite;
+    opacity: 0.8;
+}
+.star.big {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 10px white, 0 0 20px #fff;
+}
+
+@keyframes twinkle {
+    0%,100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+/* วิ้ง */
+.sparkle {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* เมฆ */
+.cloud {
+    position: fixed;
+    left: -200px;
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.6;
+    animation: cloudMove linear infinite;
+    z-index: -1;
+}
+
+/* ก้อนต่าง ๆ */
+.cloud { top: 10%; animation-duration: 60s; }
+.cloud2 { top: 30%; animation-duration: 80s; transform: scale(1.2); }
+.cloud3 { top: 50%; animation-duration: 100s; transform: scale(0.8); }
+.cloud4 { top: 70%; animation-duration: 90s; }
+.cloud5 { top: 85%; animation-duration: 120s; transform: scale(1.3); }
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    left: 10px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    right: 10px;
+}
+
+@keyframes cloudMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(120vw); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cloud"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+<div class="cloud cloud4"></div>
+<div class="cloud cloud5"></div>
+<div class="cloud static left"></div>
+<div class="cloud static right"></div>
+
+<div class="card">
+    <h1>💙 Happy Anniversary 1 y. 💛</h1>
+    <p>เค้ารักอ้วนมากๆเยย ขอบคุณที่ยังอยู่ด้วยกัน ทั้งที่เค้าทั้งงี่เง่า ทั้งขี้วีน ชอบเอาแต่ใจ ขอบคุณที่ใจเย็นกับเค้ามาตลอด ขอบคุณที่ปรับหลายๆอย่างให้อยู่ด้วยกันได้ เค้ารักอ้วนมากๆเยย อยู่กับเค้าไปนานนานเย้ยยยนะ จุ้บจุ้บบบบ🐶💖</p>
+    <p id="counter"></p>
+
+    <button onclick="playMusic()" class="music-btn">
+        💙 กดฟังเพลง 💛
+    </button>
+</div>
+
+<div class="slider">
+    <div class="slides">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+        <img src="img5.jpg">
+        <img src="img6.jpg">
+        <img src="img7.jpg">
+        <img src="img8.jpg">
+        <img src="img9.jpg">
+        <img src="img10.jpg">
+    </div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// เพลง
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+
+// สไลด์ (ช้าลง นุ่มขึ้น)
+let index = 0;
+const slides = document.querySelectorAll(".slides img");
+
+setInterval(() => {
+    const s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.left = Math.random()*100 + "vw";
+    s.style.top = Math.random()*100 + "vh";
+    s.style.transform = "scale(" + Math.random()*2 + ")";
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),2000);
+}, 100); // 👈 จาก 200 → 100
+
+// นับวัน
+function updateCounter() {
+    const start = new Date("2025-04-13");
+    const now = new Date();
+    const days = Math.floor((now - start)/(1000*60*60*24));
+    document.getElementById("counter").innerHTML =
+        "เราอยู่ด้วยกันมา 💙 " + days + " วัน 💛";
+}
+updateCounter();
+
+// หัวใจลอย
+setInterval(() => {
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💖";
+    h.style.left = Math.random()*100 + "vw";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+}, 400);
+
+// วิ้งๆ
+setInterval(() => {
+    const s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.left = Math.random()*100 + "vw";
+    s.style.top = Math.random()*100 + "vh";
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),2000);
+}, 200);
+setInterval(() => {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+
+    document.body.appendChild(star);
+
+    setTimeout(() => star.remove(), 3000);
+}, 100);
+if (Math.random() > 0.7) {
+    star.classList.add("big");
+}
+// ===== สไลด์รูป =====
+let slideIndex = 0;
+const slideImgs = document.querySelectorAll(".slides img");
+
+function showSlide() {
+    slideImgs.forEach(img => img.style.display = "none");
+    slideImgs[slideIndex].style.display = "block";
+}
+
+setInterval(() => {
+    slideIndex = (slideIndex + 1) % slideImgs.length;
+    showSlide();
+}, 4000);
+
+showSlide();
+window.onload = function () {
+    let index = 0;
+    const slides = document.querySelectorAll(".slides img");
+
+    slides[0].classList.add("active");
+
+    setInterval(() => {
+        slides[index].classList.remove("active");
+
+        index = (index + 1) % slides.length;
+
+        slides[index].classList.add("active");
+    }, 4500); // 👈 เวลานานขึ้น = ละมุน
+};
+window.onload = function () {
+    let index = 0;
+    const slides = document.querySelectorAll(".slides img");
+
+    // ให้รูปแรกโชว์
+    slides[0].classList.add("active");
+
+    setInterval(() => {
+        let current = slides[index];
+        let next = slides[(index + 1) % slides.length];
+
+        // ให้รูปถัดไปขึ้นก่อน
+        next.classList.add("active");
+
+        // แล้วค่อยเอารูปเก่าออก (หน่วงนิดนึง)
+        setTimeout(() => {
+            current.classList.remove("active");
+        }, 500); // 👈 ตัวนี้แก้ปัญหาวูบ
+
+        index = (index + 1) % slides.length;
+
+    }, 4000);
+};
+</script>
+
+</body>
+</html>
